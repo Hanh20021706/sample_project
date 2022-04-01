@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.probootstrap-header{
+  background-color: #282c34;
+}
+.probootstrap-header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  z-index: 12;
+  position: absolute;
+  top: 0;
+}
+
+.probootstrap-logo {
+  float: left;
+  color: #ffffff;
+  padding-left: 0px;
+  font-size: 20px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Open Sans", sans-serif;
+}
