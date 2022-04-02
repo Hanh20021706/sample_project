@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import CategoryForm from './page/admin/category/CategoryForm';
+import CategoryList from './page/admin/category/CategoryList';
 import Dashboard from './page/admin/Dashboard';
-import ProductForm from './page/admin/Products/ProductForm';
-import ProductsList from './page/admin/Products/ProductsList';
+import ProductForm from './page/admin/product/ProductForm';
+import ProductsList from './page/admin/product/ProductsList';
 import HomePage from './page/HomePage';
 import AdminLayout from './page/layout/AdminLayout';
 import WebsiteLayout from './page/layout/WebsiteLayout';
@@ -32,12 +34,15 @@ function App() {
 
 
                 {/* route admin */}
-                <Route path="admins" element={<AdminLayout/>}>
-                    <Route index element={<Dashboard/>}/>
-                    {/* product admin  */}
-                    <Route path="products" >
-                        <Route index element={<ProductsList/>} />
-                        <Route path="add" element={<ProductForm/>}/>
+                <Route path="admin" element={<AdminLayout/>}>
+                    <Route index element={<Dashboard/>} />
+                    <Route path="products">
+                        <Route index element={<ProductsList />} />
+                        <Route path="create" element={<ProductForm/>}/>
+                    </Route>
+                    <Route path="categories">
+                        <Route index element={<CategoryList/>} />
+                        <Route path="create" element={<CategoryForm/>}/>
                     </Route>
                 </Route>
             </Routes>
