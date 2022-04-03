@@ -43,6 +43,7 @@ function App() {
                     <Route path="categories">
                         <Route index element={<CategoryList/>} />
                         <Route path="create" element={<CategoryForm/>}/>
+                        <Route path="edit/:id" element={<CategoryForm/>}/>
                     </Route>
                 </Route>
             </Routes>
