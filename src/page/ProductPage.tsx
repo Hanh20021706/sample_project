@@ -4,7 +4,53 @@ import BannerClient from '../components/BannerClient'
 const ProductPage = () => {
     return (
         <div>
-            <BannerClient/>
+            <BannerClient />
+            <section className='probootstrap-section'>
+
+                <div className="container">
+
+                    <div className="box-filter-products">
+                        <div className="filter-total ">
+                            <i className="fa-solid fa-filter" style={{ marginRight: '5px' }} />
+                            Bộ Lọc
+                        </div>
+                        <div className="filter-item">
+                            <select  aria-label="Default select example">
+                                <option selected>Hãng</option>
+                                <option  value={1}>One</option>
+                                <option value={2}>Two</option>
+                                <option value={3}>Three</option>
+                            </select>
+
+                        </div>
+                        <div className="filter-item">
+                            <select  aria-label="Default select example">
+                                <option selected>Giá</option>
+                                <option value={1}>One</option>
+                                <option value={2}>Two</option>
+                                <option value={3}>Three</option>
+                            </select>
+                        </div>
+                        <div className="filter-item">
+                            <select caria-label="Default select example">
+                                <option selected>Loại Điện Thoại</option>
+                                <option value={1}>One</option>
+                                <option value={2}>Two</option>
+                                <option value={3}>Three</option>
+                            </select>
+                        </div>
+                        <div className="filter-item">
+                            <select aria-label="Default select example">
+                                <option selected>Màu</option>
+                                <option value={1}>One</option>
+                                <option value={2}>Two</option>
+                                <option value={3}>Three</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
             <section className="probootstrap-section">
                 <div className="container">
                     <div className="row">

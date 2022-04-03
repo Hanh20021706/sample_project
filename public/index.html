@@ -39,31 +39,30 @@
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="stylesheet" href="./css/custom.css" />
     <!-- admin -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <title>React App</title>
     <style>
-      .sidebar-admin{
+      .sidebar-admin {
         position: fixed;
         left: 0;
         width: 250px;
         height: 100%;
         background-color: #fff;
         border-right: 1px solid #ccc;
-
       }
-      .sidebar-name-admin{
+      .sidebar-name-admin {
         font-size: 22px;
         line-height: 55px;
         padding-left: 20px;
-        font-family: 'PT Sans', sans-serif;
+        font-family: "PT Sans", sans-serif;
 
         color: #000;
       }
-      .sidebar-admin ul{
+      .sidebar-admin ul {
         padding: 0;
       }
-      .sidebar-admin ul li{
+      .sidebar-admin ul li {
         list-style: none;
       }
       .sidebar-admin ul a {
@@ -73,23 +72,55 @@
         width: 100%;
         line-height: 50px;
         font-size: 15px;
-        color:  #000;
+        color: #000;
         padding-left: 20px;
-       box-sizing: border-box;
-       border-top: 1px  solid #ccc;
-       transition: .4s;
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        transition: 0.4s;
       }
-      .sidebar-nav-admin li:hover a{
-        background-color: #EEEEEE;
+      .sidebar-nav-admin li:hover a {
+        background-color: #eeeeee;
         padding-left: 30px;
       }
-      .main-admin{
+      .main-admin {
         border: 1px solid red;
-        width: 65%;
-        margin-left: 25%;
+        width: 82%;
+        margin-left: 17%;
         /* margin-right: auto; */
+      }
+      .box-filter-products {
+        display: flex;
+      
+      }
+      .filter-total {
+        border: 1px solid #ccc;
+        padding: 8px 15px;
+        width: 25%;
+      }
+      .filter-item{
+        width: 80%;
+        margin: 0px 5px;
 
       }
+      .filter-item select{
+
+          height: 42px;
+          line-height: 18px;
+          font-size: 16px;
+          width: 100%;
+          padding: 0px 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        border:  1px solid #ccc;
+        /* border-radius: 4px; */
+        }
+      .filter-item select:focus{
+            outline: 0 !important;
+      }
+      .filter-item select option{
+          border: 1px solid #ccc;
+      }
+
     </style>
   </head>
   <body>

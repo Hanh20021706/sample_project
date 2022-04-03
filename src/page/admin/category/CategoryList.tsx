@@ -42,7 +42,7 @@ const CategoryList = () => {
                                
                                 <td>{category._id}</td>
                                 <td>{category.name}</td>
-                                <td><Link to={`/categories/edit/${category._id}`}>
+                                <td><Link className="btn btn-warning"  to={`/categories/edit/${category._id}`}>
                                         edit
                                     </Link></td>
                                 <td>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavAdmin = () => {
     return (
@@ -8,23 +9,26 @@ const NavAdmin = () => {
             </h3> */}
             <ul className='sidebar-nav-admin'>
                 <li>
+                    <Link to={'/admin'}>
+                    Dashboard
+                    </Link>
                     
-                    <a href="">
+                    {/* <a href="">
                         Dashboard
 
-                    </a>
+                    </a> */}
                 </li>
                 <li>
-                    <a href="">
-                    <i className="fa-solid fa-table-tree" />
-
-                        Category
-                    </a>
+                <Link to={'/admin/categories'}>
+                Category
+                    </Link>
+                   
                 </li>
                 <li>
-                    <a href="">
-                       Products
-                    </a>
+                <Link to={'/admin/products'}>
+                Products
+                    </Link>
+                   
                 </li>
                 <li>
                     <a href="">

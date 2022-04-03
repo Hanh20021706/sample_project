@@ -26,7 +26,7 @@ const Signup = () => {
                                     <input type="password" className="form-control" id="fname" name="fname" />
                                 </div>
                                 <div className="form-group">
-                                    <button type="button" className="btn btn-success">Đăng Ký</button>
+                                <button type="button" style={{backgroundColor: '#000033',borderRadius:'2px' , color: '#fff', border:'none' , padding: '5px 15px'}}>Đăng Ký</button>
                                    
 
 

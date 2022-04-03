@@ -12,9 +12,9 @@ const ProductsList = () => {
         setProducts(response.data);
     }
 
-    const ondelete = async (_id : number) =>{
-        const response= await deleteProduct(_id);
-        if(response.status === 200){
+    const ondelete = async (_id: number) => {
+        const response = await deleteProduct(_id);
+        if (response.status === 200) {
             handleGetProducts();
         }
     }
@@ -37,21 +37,24 @@ const ProductsList = () => {
                     {
                         products.map(product => (
                             <tr key={product._id}>
-                               
+
                                 <td>{product._id}</td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
                                 <td>
-                                    <Link  className="btn btn-warning" to={`/products/edit/${product._id}`}>
-                                        edit
+                                    <Link className="btn btn-warning" to={`/products/edit/${product._id}`}>
+                                  <i className="fa-solid fa-pen-to-square" />
+
                                     </Link>
                                 </td>
                                 <td>
                                     <button className='btn btn-danger' onClick={() => ondelete(product._id as number)}>
-                                        delete
+
+                                        <i className="fa-solid fa-delete-left" />
+
                                     </button>
-                                    
-                                    </td>
+
+                                </td>
                             </tr>
                         ))
                     }
