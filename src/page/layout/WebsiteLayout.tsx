@@ -10,7 +10,7 @@ const WebsiteLayout = (props: Props) => {
         <div>
             <HeaderClient />
           
-            <main style={{ border: '1px solid red' }} >
+            <main >
                 <Outlet />
             </main>
             <FooterClient />

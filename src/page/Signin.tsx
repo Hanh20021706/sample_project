@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Signin = () => {
     return (
@@ -22,9 +23,12 @@ const Signin = () => {
                                 </div>
                                 <div className="form-group">
                                     <button type="button" style={{backgroundColor: '#000033',borderRadius:'2px' , color: '#fff', border:'none' , padding: '5px 15px'}}>Đăng Nhập</button>
+                                  
+                                    <Link to={'/signup'}>
                                     <a href="" style={{ color: '#0000FF', float: 'right', font: '12px', marginTop: '5px', marginRight: '10px' }}>
                                         Đăng Ký
                                     </a>
+                                    </Link>
 
 
 

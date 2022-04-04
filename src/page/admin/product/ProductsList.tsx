@@ -22,13 +22,21 @@ const ProductsList = () => {
         handleGetProducts();
     }, []);
     return (
-        <div>
+        <div style={{marginTop: '20px'}}>
+            <h2 style={{fontSize: '20px' , textAlign: 'center', marginBottom: '50px'}}>
+                QUẢN LÝ SẢN PHẨM
+            </h2>
             <table className="table">
+
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NAME</th>
                         <th scope="col">PRICE</th>
+                        <th scope="col">DESC</th>
+                        <th scope="col">IMG</th>
+                        <th scope="col">status</th>
+                        <th scope="col">DETAIL</th>
                         <th scope="col">EDIT</th>
                         <th scope="col">DELETE</th>
                     </tr>
@@ -41,9 +49,18 @@ const ProductsList = () => {
                                 <td>{product._id}</td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
+                                <td>{product.desc}</td>
+                                <td>{product.img}</td>
+                                <td>{product.status ? 'an' : 'hien thi'}</td>
+                                <td>
+                                    <Link  className="btn btn-info" to={`/products/${product._id}`}>
+                                        <i className="fa-solid fa-calendar-day" style={{color: '#fff'}} />
+
+                                    </Link>
+                                </td>
                                 <td>
                                     <Link className="btn btn-warning" to={`/products/edit/${product._id}`}>
-                                  <i className="fa-solid fa-pen-to-square" />
+                                        <i className="fa-solid fa-pen-to-square" />
 
                                     </Link>
                                 </td>
@@ -62,6 +79,9 @@ const ProductsList = () => {
 
                 </tbody>
             </table>
+            <Link style={{margin: '10px 0px'}} className='btn btn-success' to={'/admin/products/create'}>
+                Thêm Sản Phẩm
+            </Link>
 
         </div>
     )

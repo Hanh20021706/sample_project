@@ -25,7 +25,10 @@ const CategoryList = () => {
     }, [])
 
     return (
-        <div>
+        <div style={{marginTop: '20px'}}>
+              <h2 style={{fontSize: '20px' , textAlign: 'center', marginBottom: '50px'}}>
+                QUẢN LÝ DANH MỤC SẢN PHẨM
+            </h2>
             <table className="table">
                 <thead>
                     <tr>
@@ -57,7 +60,9 @@ const CategoryList = () => {
                    
                 </tbody>
             </table>
-
+            <Link style={{margin: '10px 0px'}} className='btn btn-success' to={'/admin/categories/create'}>
+                Thêm Danh Mục
+            </Link>
         </div>
     )
 }

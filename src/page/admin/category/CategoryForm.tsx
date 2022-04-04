@@ -45,7 +45,7 @@ const CategoryForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{width: '50%' , marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>
                 <div>
                     <div className="mb-3">
                         <label  className="form-label">Name</label>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeaderClient = () => {
     return (
@@ -10,15 +11,23 @@ const HeaderClient = () => {
                     <div className="mobile-menu-overlay" />
                     <nav role="navigation" className="probootstrap-nav hidden-xs">
                         <ul className="probootstrap-main-nav">
-                            <li className="active"><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
+                            <li className=""><Link to={'/'}>
+                                Home
+                            </Link></li>
+                            <li>
+                                <Link to={'/products'}>
+                                    Projects
+                                </Link>
+                            </li>
                             <li><a href="services.html">Services</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <ul className="probootstrap-right-nav hidden-xs">
                             <li>
-                                <a href="">sign in</a>
+                                <a href=""><Link to={'/signin'}>
+                                signin
+                                </Link></a>
                             </li>
                         </ul>
                     </nav>
