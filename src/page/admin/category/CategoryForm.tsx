@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom'
-import { createCategory, updateCategory } from '../../../api/category';
+import { createCategory, getCategory, updateCategory } from '../../../api/category';
 import { CATEGORY_TYPE } from '../../../types/category';
 
 const CategoryForm = () => {
@@ -37,15 +37,26 @@ const CategoryForm = () => {
             navigate('/admin/categories')
         }
     }
+    const handleGetCate = async (_id: string) => {
+        const response = await getCategory(_id);
+        if(response.status === 200){
+            reset({
+                ...response.data,
+
+            })
+        }
+    }
 
     useEffect(() => {
-
-    }, [])
+        if(_id){
+            handleGetCate(_id)
+        }
+    }, [_id])
 
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)} style={{width: '50%' , marginLeft: 'auto', marginRight: 'auto', marginTop: '20px'}}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{width: '50%' , marginLeft: 'auto', marginRight: 'auto', marginTop: '70px'}}>
                 <div>
                     <div className="mb-3">
                         <label  className="form-label">Name</label>

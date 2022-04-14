@@ -24,7 +24,7 @@ function App() {
                     {/* products */}
                     <Route path="products">
                         <Route index element={<ProductPage />} />
-                        <Route path=":id" element={<ProductDetail/>}/>
+                        <Route path=":_id" element={<ProductDetail/>}/>
                     </Route>
 
                     <Route path="signin" element={<Signin/>}/>
@@ -39,6 +39,8 @@ function App() {
                     <Route path="products">
                         <Route index element={<ProductsList />} />
                         <Route path="create" element={<ProductForm/>}/>
+                        <Route path="edit/:_id" element={<ProductForm/>}/>
+                        <Route path="_:id" element={<ProductDetail/>}/>
                     </Route>
                     <Route path="categories">
                         <Route index element={<CategoryList/>} />

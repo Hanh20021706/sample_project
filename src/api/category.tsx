@@ -13,5 +13,5 @@ export const deleteCategory = (_id : number | string) => {
     return api.delete(`/categories/${_id}`)
 }
 export const updateCategory = (_id : string | undefined , data: any) => {
-    return api.put(`/categories/${_id}`)
+    return api.put(`/categories/${_id}`, data)
 }

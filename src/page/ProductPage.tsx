@@ -75,7 +75,7 @@ const ProductPage = () => {
                                     <div className="probootstrap-card">
                                         <div className="probootstrap-card-media">
                                             <Link to={`${product._id}`}>
-                                            <a href="single-page.html"><img src="https://cdn.tgdd.vn/Products/Images/42/274153/iphone-13-pro-max-xanh-la-thumb-600x600.jpg" className="img-responsive img-border" alt="Free HTML5 Template by uicookies.com" /></a>
+                                            <a href="single-page.html"><img src={product.img} className="img-responsive img-border" alt="Free HTML5 Template by uicookies.com" /></a>
 
                                             </Link>
                                         </div>

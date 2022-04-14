@@ -14,9 +14,14 @@ const ProductsList = () => {
 
     const ondelete = async (_id: number) => {
         const response = await deleteProduct(_id);
-        if (response.status === 200) {
-            handleGetProducts();
+        const confrim = window.confirm("ban co chac chan xoa");
+        if(confrim){
+            if (response.status === 200) {
+
+                handleGetProducts();
+            }
         }
+        
     }
     useEffect(() => {
         handleGetProducts();
@@ -43,15 +48,19 @@ const ProductsList = () => {
                 </thead>
                 <tbody>
                     {
-                        products.map(product => (
-                            <tr key={product._id}>
+                        products.map((product, index) => (
+                            <tr key={index}>
 
-                                <td>{product._id}</td>
+                                <td>{index+1}</td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
                                 <td>{product.desc}</td>
-                                <td>{product.img}</td>
-                                <td>{product.status ? 'an' : 'hien thi'}</td>
+                                <td>
+                                 {product.img ? <img src={product.img} width={200}  alt="" /> 
+                                :null 
+                                }
+                                </td>
+                                <td>{product.status ? 'hien thi' : 'an'}</td>
                                 <td>
                                     <Link  className="btn btn-info" to={`/products/${product._id}`}>
                                         <i className="fa-solid fa-calendar-day" style={{color: '#fff'}} />
@@ -59,7 +68,7 @@ const ProductsList = () => {
                                     </Link>
                                 </td>
                                 <td>
-                                    <Link className="btn btn-warning" to={`/products/edit/${product._id}`}>
+                                    <Link className="btn btn-warning" to={`/admin/products/edit/${product._id as  number}`}>
                                         <i className="fa-solid fa-pen-to-square" />
 
                                     </Link>
